@@ -2,36 +2,6 @@
 
 特别鸣谢：https://github.com/SoYoungxSoWhat/smzdm
 
-
-
-## 二、添加 Secret
-
-**`Settings`->`Secrets`->`New secret`，添加以下Secret：**
-- `Conf`：其值如下：
-    ```json
-    {
-    	"Users": [{
-    			"Task": "CC", //自定义名字，选填
-    			"Username": "abc@163.com", //账号
-    			"Password": "aaa" //密码
-    		}, {
-    			"Task": "MM",
-    			"Username": "123@163.com",
-    			"Password": "111"
-    		}
-    	],
-    	"ScKey": "", //server酱sckey，不填不开启
-    	"ScType": "Failed", //通知类型. Always:始终通知; Failed:失败时通知; 不填/其他:不通知;
-    	"RdsServer": "xxx.redislabs.com:1234", //redis地址，选填
-    	"RdsPwd": "ppp" //redis密码，选填
-    }
-    ```
-    - `RdsServer`和`RdsPwd`是选填的，用于配置redis，来存储cookie。后续可以重用这个cookie，避免频繁登录账号。建议配置一下，可以使用[redislabs](https://app.redislabs.com/)的免费套餐。
-    - `JsUrl`和`LoginStr`这2个字段是用来登录账号的，已经设置好了默认值，**不建议**修改，所以上面的配置中没有列出来。详细请查看源码。
-
-**步骤图示如下：**
-![添加secret](https://img.guoqianfan.com/note/2020/08/添加secret.png)
-
 ## 三、运行
 
 **`Actions`->`Run`->`Run workflow`**：
